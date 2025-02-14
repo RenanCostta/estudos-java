@@ -5,7 +5,10 @@ public class Employee {
     private String name;
     private double salary;
 
-    public Employee(int id, String name) {
+    public Employee(){
+    }
+
+    public Employee(int id, String name){
         this.id = id;
         this.name = name;
     }
@@ -40,19 +43,19 @@ public class Employee {
         this.salary = salary;
     }
 
-
-    public void increaseSalary(double percentage) {
-        this.salary += salary * percentage / 100.0;
+    public void increaseSalary(double percentage){
+        salary += salary * percentage / 100;
     }
 
 
     @Override
-    public String toString(){
-        return id
+    public String toString() {
+        return "Id: "
+                + id
                 + ", "
                 + name
                 + ", "
-                + String.format("%.2f", salary);
+                + String.format("%.2f%n", salary);
     }
 
 }

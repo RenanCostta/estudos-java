@@ -2,10 +2,12 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class program {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
         List<String> list = new ArrayList<>();
 
@@ -51,6 +53,25 @@ public class program {
         String name2 = list.stream().filter(x -> x.charAt(0) == 'N').findFirst().orElse(null);
         System.out.println(name);
         System.out.println(name2);
+
+        System.out.println("-------------------------");
+
+        String entrada;
+        System.out.println("Adicione pessoas (ou digite '0' para encerrar)");
+        while (true) {
+
+            entrada = sc.nextLine();
+
+            if (entrada.equals("0")) {
+                break;
+            }
+
+            list.add(entrada);
+        }
+
+        for (String x : list) {
+            System.out.println(x);
+        }
 
     }
 }
