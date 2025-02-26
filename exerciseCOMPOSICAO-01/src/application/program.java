@@ -26,7 +26,7 @@ public class program {
         String workerName = sc.nextLine();
         System.out.print("Level: ");
         String workerLevel = sc.nextLine();
-        System.out.print("Base salary: ");
+        Sys m.out.print("Base salary: ");
         double baseSalary = sc.nextDouble();
         Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel), baseSalary, new Department(departmentName));
 
