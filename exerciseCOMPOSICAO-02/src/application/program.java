@@ -24,8 +24,6 @@ public class program {
         System.out.println(p1);
 
 
-        System.out.println("Sou bonito e gostoso"); 
-
 
     }
 }
