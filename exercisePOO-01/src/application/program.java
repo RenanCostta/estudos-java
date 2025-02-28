@@ -1,45 +1,34 @@
 package application;
 
-import entities.triangle;
+import entities.Bicycle;
 
 import java.util.Locale;
-
 import java.util.Scanner;
 
 public class program {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+        Scanner sc = new Scanner(System.in);
+        sc.useLocale(Locale.US);
+        Locale.setDefault(Locale.US);
 
-        triangle x, y;
-        x = new triangle();
-        y = new triangle();
+        Bicycle bike1 = new Bicycle();
+        Bicycle bike2 = new Bicycle();
 
-        System.out.println("enter the measures os triangle X: ");
-        x.a = sc.nextDouble();
-        x.b = sc.nextDouble();
-        x.c = sc.nextDouble();
+        bike1.changeCadence(50);
+        bike1.changeSpeed(10);
+        bike1.changeGear(5);
+        System.out.println("Bicicleta 1: " + bike1.toString());
 
-        System.out.println("enter the measures os triangle Y: ");
-        y.a = sc.nextDouble();
-        y.b = sc.nextDouble();
-        y.c = sc.nextDouble();
-
-        double areaX = x.area();
-        double areaY = y.area();
-
-        System.out.printf("Triangle X area: %.4f%n", areaX);
-        System.out.printf("Triangle Y area: %.4f%n", areaY);
+        bike2.changeCadence(50);
+        bike2.changeSpeed(10);
+        bike2.changeGear(2);
+        bike1.changeCadence(40);
+        bike2.changeSpeed(15);
+        bike2.changeGear(3);
+        System.out.println("Bicicleta 2: " + bike2.toString());
 
 
-        if (areaX > areaY) {
-            System.out.println("Larger area: X");
-        }
-        else if (areaX < areaY) {
-            System.out.println("larger area: Y");
-        }
-        else {
-            System.out.println("same area.");
-        }
-            sc.close();
+
+
     }
 }
