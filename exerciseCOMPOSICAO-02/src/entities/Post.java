@@ -14,17 +14,21 @@ public class Post {
     private String content;
     private Integer likes;
 
+
     private List<Comment> comments = new ArrayList<>();
 
-    public Post(){
+
+    public Post() {
+
     }
 
-    public Post(Date moment, String title, String content, Integer likes){
+    public Post(Date moment, String title, String content, Integer likes) {
         this.moment = moment;
         this.title = title;
         this.content = content;
         this.likes = likes;
     }
+
 
     public Date getMoment() {
         return moment;
@@ -70,7 +74,7 @@ public class Post {
         comments.remove(comment);
     }
 
-    public String toString() {
+    public String toString(){
         StringBuilder sb = new StringBuilder();
         sb.append(title + "\n");
         sb.append(likes);
@@ -78,7 +82,11 @@ public class Post {
         sb.append(sdf.format(moment) + "\n");
         sb.append(content + "\n");
         sb.append("Comments:" + "\n");
-        sb.append(comments);
-
+        for (Comment c : comments){
+            sb.append(c.getText() + "\n");
+        }
+        return sb.toString();
     }
 }
+
+
