@@ -55,7 +55,7 @@ import java.util.Scanner;
             acc02.withDraw(200.0);
             System.out.println(acc02.getBalance());
 
-            
+
 
             sc.close();
         }
