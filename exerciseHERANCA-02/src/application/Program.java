@@ -41,8 +41,19 @@ import java.util.Scanner;
                 System.out.println("Update!");
             }
 
+            // Sobreposição, palavra super, anotação @Override
 
+            Account acc0 = new Account(1001, "Rennan", 1000.0);
+            acc0.withDraw(200.0);
+            System.out.println("Saldo da conta: " + acc0.getBalance());
 
+            Account acc01 = new SavingAccount(1007, "Rennann", 1000.0, 0.01);
+            acc01.withDraw(200.0);
+            System.out.println(acc01.getBalance());
+
+            Account acc02 = new BusinessAccount(1008, "José", 1000.0, 500.0);
+            acc02.withDraw(200.0);
+            System.out.println(acc02.getBalance());
 
 
 
