@@ -11,7 +11,7 @@ import entities.HourContract;
 import entities.Worker;
 import entities.enums.WorkerLevel;
 
-public class program {
+public class Program {
 
     public static void main(String[] args) throws ParseException {
 
@@ -33,7 +33,7 @@ public class program {
         System.out.print("How many contracts to this worker? ");
         int n = sc.nextInt();
 
-        for (int i=1; i<=n; i++) {
+        for (int i = 1; i <= n; i++) {
             System.out.println("Enter contract #" + i + " data:");
             System.out.print("Date (DD/MM/YYYY): ");
             Date contractDate = sdf.parse(sc.next());
@@ -56,4 +56,5 @@ public class program {
 
         sc.close();
     }
+
 }

@@ -1,5 +1,6 @@
 package entities;
 
+
 import entities.enums.Color;
 
 public abstract class Shape {
@@ -21,5 +22,5 @@ public abstract class Shape {
     }
 
 
-    public abstract Double area();
+    public abstract double area();
 }
